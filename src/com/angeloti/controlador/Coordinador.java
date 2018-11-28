@@ -5,6 +5,10 @@
  */
 package com.angeloti.controlador;
 
+import com.angeloti.modelo.JframeBook;
+import com.angeloti.modelo.JframeMagazine;
+import com.angeloti.modelo.JfrmMovie;
+import com.angeloti.modelo.JfrmSeries;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -35,24 +39,36 @@ public class Coordinador {
                     //salir
                     break;
                 case 1:
-                 showBooks();
-                   
+            {
+                Coordinador coordinador = null;
+                JframeBook jfrbook= new JframeBook(coordinador);
+                jfrbook.setVisible(true);
+            }
+                     
                  //showBooks
                     break;
                 case 2:
-                    showMagazines();
-                    //serie
+            {
+                Coordinador coordinador = null;
+                JframeMagazine jfrMaga= new JframeMagazine(coordinador);
+                jfrMaga.setVisible(true);
+            }
+                    
                     break;
                 case 3:
-                    showMovies();
+                    Coordinador coordinador = null;
+                   JfrmMovie jfrMo= new JfrmMovie(coordinador);
+                   jfrMo.setVisible(true);
+//                    showMovies();
                     //showmovies
                     break;
                 case 4:
-                    showSeries();
+                   
+                    
                     //salir
                     break;
                 case 5:
-                    makeReport();
+//                    makeReport();
                     
                     //salir
                     break;
@@ -120,5 +136,11 @@ public class Coordinador {
  private static void makeReport(Date date){
      
  }
+
+    private static class JfrmMovieMovie {
+
+        public JfrmMovieMovie() {
+        }
+    }
 }
        
